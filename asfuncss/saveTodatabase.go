@@ -56,7 +56,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
 }
 
 func AboutUs(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles("about.html"))
+	tmpl := template.Must(template.ParseFiles("Dashboard.html"))
 	tmpl.Execute(w, nil)
 }
 

@@ -206,5 +206,13 @@
     "company": "wwwwwwwwww",
     "password": "$2a$10$2P/vri/L4fMPyf0KGSPoResqE3tbcGoBFz6NibHo78vWaEqGLZm1a",
     "confirmpassword": "$2a$10$2P/vri/L4fMPyf0KGSPoResqE3tbcGoBFz6NibHo78vWaEqGLZm1a"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "aaaaaaaaaaa",
+    "email": "kan@gmail.com",
+    "company": "wwwwwww",
+    "password": "$2a$10$KnJAysnUOMjB1elxmfZpxeVQfCba9E.rSaVGYR6un.ioIWID52jPa",
+    "confirmpassword": "$2a$10$KnJAysnUOMjB1elxmfZpxeVQfCba9E.rSaVGYR6un.ioIWID52jPa"
   }
 ]
