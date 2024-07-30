@@ -271,3 +271,8 @@ main {
 .feature-box p {
     margin: 0;
 }
+
+.logo img {
+    width: 100px;
+    height: 35px; 
+}
