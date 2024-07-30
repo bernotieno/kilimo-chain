@@ -5,46 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="static/dash.css">
+    <script src="static/scriptdash.js" defer></script>
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h2>Menu</h2>
-            <button id="closeSidebar">&times;</button>
+    <div class="navbar">
+        <button class="toggle-btn">&#9776;</button>
+        <div class="user-info">
+            <img src="user-image.jpg" alt="User Image" class="user-image">
+            <span class="username">Username</span>
         </div>
-        <!-- Add sidebar content here -->
-    </div>
-    <div class="main-content" style="background-image: url('Images/pexels-pixabay-60507.jpg');">
-        <div class="header">
-            <button id="openSidebar">&#9776;</button>
-            <span id="UserName"></span>
-        </div>
-        <div class="content">
-            <div class="info-card">
-                <p class="Info">User Info</p>
-                <p id="UserName">Name:</p>
-                <p id="Age">Age:</p>
-                <p id="identityNo">ID:</p>
-                <p id="contact">No:</p>
-                <p id="Email">Email:</p>
-            </div>
-            <div class="stats-card">
-                <p>TOTAL SALES: 34</p>
-                <p>COMPLETED: 30</p>
-                <p>IN TRANSIT: 4</p>
-                <p>Profit: 245</p>
-            </div>
-            <div class="trending-card">
-                <p>Current Trending Items</p>
-            </div>
-            <div class="icons">
-                <div class="icon">&#128722;</div>
-                <div class="icon">&#128172;</div>
-                <div class="icon">&#9733;</div>
-            </div>
-        </div>
+        <button class="logout-btn">Log Out</button>
     </div>
 
-    <script src="static/scriptdash.js"></script>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="info-link">Info</a>
+        <a href="#" id="sale-link">Sale</a>
+        <a href="#" id="logout-link">Log Out</a>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <div id="home" class="content active">
+            <h2>User Overview</h2>
+            <div class="home-grid">
+                <div class="panel user-info-panel">
+                    <p><strong>Description:</strong> Short description of the user.</p>
+                </div>
+                <div class="panel sales-info-panel">
+                    <p><strong>Total Sales:</strong> 123</p>
+                    <p><strong>Completed Sales:</strong> 100</p>
+                    <p><strong>Ongoing Trades:</strong> 5</p>
+                    <p><strong>Profit Margin:</strong> 20%</p>
+                </div>
+                <div class="panel trending-items-panel">
+                    <p><strong>Trending:</strong> Item 1, Item 2, Item 3</p>
+                </div>
+                <div class="panel messages-rating-panel">
+                    <p><strong>Messages:</strong> <span class="message-icon">📩</span> No new messages</p>
+                    <p><strong>Rating:</strong> <span class="star-icon">⭐</span> 4.5/5</p>
+                </div>
+            </div>
+        </div>
+        <div id="info" class="content">
+            <h2>User Information</h2>
+            <div class="info-card">
+                <p>All user information and customization options here.</p>
+            </div>
+        </div>
+        <div id="sale" class="content">
+            <h2>Post a Product for Sale</h2>
+            <div class="sale-form-card">
+                <form id="sale-form">
+                    <label for="product-image">Product Image:</label>
+                    <input type="file" id="product-image" required>
+                    <label for="short-description">Short Description:</label>
+                    <input type="text" id="short-description" required>
+                    <label for="long-description">Long Description:</label>
+                    <textarea id="long-description" required></textarea>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" required>
+                    <button type="submit">Post Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
