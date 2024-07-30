@@ -12,7 +12,7 @@
         <div class="container">
             <span class="logo"><image src="Images/logo.png" alt="Kilimo-Chain Logo"></image></span>
             <nav class="rightSide">
-                <button class="sign-up" onclick="openSignUpForm()">Register</button>
+                <button class="sign-up" onclick="window.location.href='Signup.html'">Register</button>
                 <span class="product" onclick="window.location.href='products.html'">Products</span>
                 <span class="part" onclick="window.location.href='collaborators.html'">Partners</span>
                 <span class="about" onclick="window.location.href='about.html'">About</span>
@@ -47,86 +47,7 @@
         </div>
     </section>
 
-    <div id="signup-form" class="modal">
-        <div class="modal-content">
-            <span class="enter" onclick="openFarmerSignUpForm()">Farmer</span>
-            <span class="close" onclick="closeForms()">&times;</span>
-            <h2>REGISTER</h2>
-            <P>Sign up now and get full access</P>
-            <form id="registration-form" action="/reg" method="POST">
-                <div class="name-container">
-                    <input type="text" placeholder="Firstname" name="Firstname" required>
-                    <input type="text" placeholder="Secondname" name="Secondname" required>
-                </div>
-                <input type="email" placeholder="Email" name="Email" required>
-                <input type="text" placeholder="Company" name="Company" required>
-                <input type="password" placeholder="Password" name="Password" required>
-                <input type="password" placeholder="Confirm password" name="Confirmpassword" required>
-                <button type="submit">SUBMIT</button>
-            </form>
-            
-            <div><p class="erro"></p></div>
-            <p>Already have an account? <a href="#" onclick="openSignInForm()">Sign in</a></p>
-        </div>
-    </div>
+   
 
-    <div id="farmer-signup" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeForms()">&times;</span>
-            <h2>REGISTER</h2>
-            <p>Register and sell all you want.</p>
-            <form>
-                <div class="name-container">
-                    <input type="textF" placeholder="First name" name="Firstname">
-                    <input type="textL" placeholder="Second name" name="Secondname">
-                </div>
-                <input type="email" placeholder="Email" name="email">
-                <input type="text" placeholder="Company" name="Company">
-                <input type="password" placeholder="Password" name="Password">
-                <input type="password" placeholder="Confirm password" name="Confirmpassword">
-                <button type="submit">SUBMIT</button>
-            </form>
-            <p>Already have an account? <a href="#" onclick="openSignInForm()">Sign in</a></p>
-        </div>
-    </div>
-
-    <div id="signin-form" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeForms()">&times;</span>
-            <h2>LOGIN</h2>
-            <form action="/login" method="POST">
-                <input type="email" placeholder="Email" name="loginemail">
-                <input type="password" placeholder="Password" name="loginpassword">
-                <button type="submit">SUBMIT</button>
-            </form>
-            
-            <p><a href="#">Forgot Password?</a></p>
-            <p>Or Sign in using</p>
-            <button class="google-button">Google</button>
-        </div>
-    </div>
-    <script src="static/script.js"></script>
-    
-<script>
-    function handleSwap(event) {
-        const response = event.detail.xhr.responseText;
-        const data = JSON.parse(response);
-
-        if (data.target && data.html) {
-            if (data.target === "html") {
-                // Replace the entire document content
-                document.documentElement.innerHTML = data.html;
-            } else {
-                // Update the specific target element
-                document.querySelector(data.target).innerHTML = data.html;
-            }
-        }
-    }
-
-    document.getElementById('registration-form').addEventListener('htmx:afterSwap', handleSwap);
-</script>
-
-        
-    
 </body>
 </html>
