@@ -1,6 +1,6 @@
 function openSignUpForm() {
     closeForms();
-    document.getElementById('signup-form').style.display = 'flex';
+   document.getElementById('signup-form').style.display = 'flex';
     document.body.style.filter = 'none';
 }
 

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
+	"text/template"
 )
 
 type User struct {
@@ -15,44 +16,50 @@ type User struct {
 	Confirmpassword string `json:"confirmpassword"`
 }
 
-type Response struct {
-    Target string `json:"target"`
-    HTML   string `json:"html"`
+type PageData struct {
+	ErrorMessage string
 }
 
 func Reg(w http.ResponseWriter, r *http.Request) {
-    r.ParseForm()
+	r.ParseForm()
 
-    user := User{
-        Firstname:       r.Form.Get("Firstname"),
-        Secondname:      r.Form.Get("Secondname"),
-        Email:           r.Form.Get("Email"),
-        Company:         r.Form.Get("Company"),
-        Password:        r.Form.Get("Password"),
-        Confirmpassword: r.Form.Get("Confirmpassword"),
-    }
+	user := User{
+		Firstname:       r.FormValue("Firstname"),
+		Secondname:      r.FormValue("Secondname"),
+		Email:           r.FormValue("Email"),
+		Company:         r.FormValue("Company"),
+		Password:        r.FormValue("Password"),
+		Confirmpassword: r.FormValue("Confirmpassword"),
+	}
 
-    response := Response{}
-
-    if CheckUsernameExist(user.Email, w) {
-    
-        response.Target = ".erro"
-        response.HTML = "<div class='error'>Username already exists</div>"
-    } else if user.Password != user.Confirmpassword {
-    
-        response.Target = "#erro"
-        response.HTML = "<div class='error'>Password should be the same as the confirm password</div>"
-    } else {
-        user.Password = Hashpassword(user.Password)
-        user.Confirmpassword = user.Password
-        SaveDetails(user, w)
-        response.Target = "html"
-        response.HTML = "<div class='success'>YOU HAVE SUCCESSFULLY SIGNED UP</div>"
-    }
-
-    w.Header().Set("Content-Type", "application/json")
-    json.NewEncoder(w).Encode(response)
+	if CheckUsernameExist(user.Email, w) {
+		// data := PageData{ErrorMessage: "Passwords do not match."}
+		// renderTemplate(w, "errorform.html", data)
+		return
+	} else if user.Password != user.Confirmpassword {
+		return
+	} else {
+		user.Password = Hashpassword(user.Password)
+		user.Confirmpassword = user.Password
+		SaveDetails(user, w)
+		http.Redirect(w, r, "/about", http.StatusFound)
+	}
 }
+
+func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
+	t, err := template.ParseFiles(tmpl)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	t.Execute(w, data)
+}
+
+func AboutUs(w http.ResponseWriter, r *http.Request) {
+	tmpl := template.Must(template.ParseFiles("about.html"))
+	tmpl.Execute(w, nil)
+}
+
 func SaveDetails(user User, w http.ResponseWriter) {
 	databaseFile := "users.json"
 

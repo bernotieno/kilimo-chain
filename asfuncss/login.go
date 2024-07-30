@@ -2,7 +2,6 @@ package asfuncss
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"os"
 
@@ -28,26 +27,19 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	}
 	useremail := r.Form.Get("loginemail")
 	// Check if the username exists and the password matches
-	response := Response{}
 
 	for _, user := range users {
 		if user.Email == useremail {
 			if CheckPassword(r, user.Password) {
-				response.Target = "html"
-				response.HTML = "<div class='success'>YOU HAVE SUCCESSFULLY SIGNED UP</div>"
-				fmt.Println("you are in")
+				http.Redirect(w, r, "/about", http.StatusFound)
 			} else {
-				response.Target = "#erro"
-				response.HTML = "<div class='error'>WRONG PASSWORD OR USERNAME</div>"
-				w.Write([]byte("WRONG PASSWORD OR USERNAME"))
-				fmt.Println(user.Password)
-				fmt.Println(r.Form.Get("loginpassword"))
+
+				data := PageData{ErrorMessage: "Passwords do not match."}
+				renderTemplate(w, "errorform.html", data)
+				return
 			}
 		}
 	}
-
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
 }
 
 func CheckPassword(r *http.Request, storedPassword string) bool {

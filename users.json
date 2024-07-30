@@ -182,5 +182,29 @@
     "company": "1",
     "password": "$2a$10$CvwSdqO/brdr8oBxsZPsseYc4pNAtPLhk9KngIZWUCUnpKVGFw86u",
     "confirmpassword": "$2a$10$CvwSdqO/brdr8oBxsZPsseYc4pNAtPLhk9KngIZWUCUnpKVGFw86u"
+  },
+  {
+    "Firstname": "teddy",
+    "Secondname": "si",
+    "email": "f@gmail.com",
+    "company": "ss",
+    "password": "$2a$10$N3D8xP5R2wTd/M5YOXlnwu1WnNbIZUnhZkihm6F.lJ81zBfe7y9Sa",
+    "confirmpassword": "$2a$10$N3D8xP5R2wTd/M5YOXlnwu1WnNbIZUnhZkihm6F.lJ81zBfe7y9Sa"
+  },
+  {
+    "Firstname": "Teddy",
+    "Secondname": "TED",
+    "email": "dan@gmail.com",
+    "company": "kis",
+    "password": "$2a$10$mcin1K47Q/Qmu6cqMLlN6eSIXYvjoyqt8NX3941X2.dHOyMmKCteS",
+    "confirmpassword": "$2a$10$mcin1K47Q/Qmu6cqMLlN6eSIXYvjoyqt8NX3941X2.dHOyMmKCteS"
+  },
+  {
+    "Firstname": "www",
+    "Secondname": "wwwwww",
+    "email": "dann@gmail.com",
+    "company": "wwwwwwwwww",
+    "password": "$2a$10$2P/vri/L4fMPyf0KGSPoResqE3tbcGoBFz6NibHo78vWaEqGLZm1a",
+    "confirmpassword": "$2a$10$2P/vri/L4fMPyf0KGSPoResqE3tbcGoBFz6NibHo78vWaEqGLZm1a"
   }
 ]
