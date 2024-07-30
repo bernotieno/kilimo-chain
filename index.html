@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo"><img src="Images/kilimo-chain.png" alt="Kilimo-Chain"></span>
+            <nav class="rightSide">
+                <span class="about" onclick="window.location.href='about.html'">About</span>
+                <span class="product" onclick="window.location.href='products.html'">Products</span>
+                <span class="part" onclick="window.location.href='collaborators.html'">Partners</span>
+                <button class="sign-up" onclick="openSignUpForm()">Register</button>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <!-- Main content here -->
+    </main>
+
+    <div id="signup-form" class="modal">
+        <div class="modal-content">
+            <label class="enter">
+                <input type="checkbox">
+                <span class="slider" onclick="openFarmerSignUpForm()"></span>
+            </label>
+            <span class="close" onclick="closeForms()">&times;</span>
+            <h2>REGISTER AS A BUYER</h2>
+            <P>Sign up now and get full access</P>
+            <form>
+                <div class="name-container">
+                    <input type="textF" placeholder="Firstname">
+                    <input type="textL" placeholder="Secondname">
+                </div>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Company">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm password">
+                <button type="submit">SUBMIT</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="openSignInForm()">Sign in</a></p>
+        </div>
+    </div>
+
+    <div id="farmer-signup" class="modal">
+        <div class="modal-content">
+            <label class="company">
+                <input type="checkbox">
+                <span class="slide" onclick="openSignUpForm()"></span>
+            </label>
+            <span class="close" onclick="closeForms()">&times;</span>
+            <h2>REGISTER AS A FARMER</h2>
+            <p>Register and sell all you want.</p>
+            <form>
+                <div class="name-container">
+                    <input type="textF" placeholder="Firstname">
+                    <input type="textL" placeholder="Secondname">
+                </div>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Company">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm password">
+                <button type="submit">SUBMIT</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="openSignInForm()">Sign in</a></p>
+        </div>
+    </div>
+
+    <div id="signin-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForms()">&times;</span>
+            <h2>LOGIN</h2>
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button type="submit">SUBMIT</button>
+            </form>
+            <p><a href="#">Forgot Password?</a></p>
+            <p>Or Sign in using</p>
+            <button class="google-button">Google</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
