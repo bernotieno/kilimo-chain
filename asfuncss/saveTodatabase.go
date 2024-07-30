@@ -20,6 +20,8 @@ type PageData struct {
 	ErrorMessage string
 }
 
+var Email string
+
 func Reg(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 
@@ -41,6 +43,7 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 	} else {
 		user.Password = Hashpassword(user.Password)
 		user.Confirmpassword = user.Password
+		Email = user.Email
 		SaveDetails(user, w)
 		http.Redirect(w, r, "/about", http.StatusFound)
 	}

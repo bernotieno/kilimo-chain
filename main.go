@@ -30,7 +30,7 @@ func router(w http.ResponseWriter, r *http.Request) {
 	} else if r.URL.Path == "/login" {
 		asfuncss.Login(w, r)
 	} else if r.URL.Path == "/about" {
-		asfuncss.AboutUs(w, r)
+		asfuncss.DashboardHandler(w, r)
 	}
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="static/dash.css">
+    <script defer src="https://unpkg.com/htmx.org@2.0.0"></script>
 </head>
 <body>
     <div class="sidebar" id="sidebar">
@@ -21,21 +22,22 @@
         </div>
         <div class="content">
             <div class="info-card">
-                <p class="Info">User Info</p>
-                <p id="UserName">Name:</p>
-                <p id="Age">Age:</p>
-                <p id="identityNo">ID:</p>
-                <p id="contact">No:</p>
-                <p id="Email">Email:</p>
+                <p>Name: <span id="UserName">{{.Name}}</span></p>
+<p>Age: <span id="Age">{{.Age}}</span></p>
+<p>ID: <span id="identityNo">{{.IdentityNo}}</span></p>
+<p>No: <span id="contact">{{.Contact}}</span></p>
+<p>Email: <span id="Email">{{.Email}}</span></p>
+
             </div>
             <div class="stats-card">
-                <p>TOTAL SALES: 34</p>
-                <p>COMPLETED: 30</p>
-                <p>IN TRANSIT: 4</p>
-                <p>Profit: 245</p>
+                <p>TOTAL SALES: <span id="totalSales">{{.TotalSales}}</span></p>
+                <p>COMPLETED: <span id="completedSales">{{.CompletedSales}}</span></p>
+                <p>IN TRANSIT: <span id="inTransitSales">{{.InTransitSales}}</span></p>
+                <p>Profit: <span id="profit">{{.Profit}}</span></p>
+                
             </div>
             <div class="trending-card">
-                <p>Current Trending Items</p>
+                <p>Current Trending Items:{{.TrendingItems}}</p>
             </div>
             <div class="icons">
                 <div class="icon">&#128722;</div>
@@ -45,6 +47,6 @@
         </div>
     </div>
 
-    <script src="scriptdash.js"></script>
+    <script src="static/scriptdash.js"></script>
 </body>
 </html>

@@ -214,5 +214,69 @@
     "company": "wwwwwww",
     "password": "$2a$10$KnJAysnUOMjB1elxmfZpxeVQfCba9E.rSaVGYR6un.ioIWID52jPa",
     "confirmpassword": "$2a$10$KnJAysnUOMjB1elxmfZpxeVQfCba9E.rSaVGYR6un.ioIWID52jPa"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddysiaka@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$VuEzO/XsZlY7vqnaky6LVO0vbnrBEK6fwOeIjo4idQMUKpS5puITG",
+    "confirmpassword": "$2a$10$VuEzO/XsZlY7vqnaky6LVO0vbnrBEK6fwOeIjo4idQMUKpS5puITG"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddysiakaa@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$Mi2hQaAW/1CqkzW0qEvxUuHPemyZNfMhxGmb7Y5QlPg.2qeRokc52",
+    "confirmpassword": "$2a$10$Mi2hQaAW/1CqkzW0qEvxUuHPemyZNfMhxGmb7Y5QlPg.2qeRokc52"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddysiakaaa@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$I/cCktPWXv1YsME3e5wikuUpiRBaOe3Gsdt2gz0M5fTCdvLpQeabi",
+    "confirmpassword": "$2a$10$I/cCktPWXv1YsME3e5wikuUpiRBaOe3Gsdt2gz0M5fTCdvLpQeabi"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddysiakaaaa@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$A31IOdjmmfw1UTHC2.f1q.cl5xdnF3r.6yWAu7YynEznhPaWJfgaC",
+    "confirmpassword": "$2a$10$A31IOdjmmfw1UTHC2.f1q.cl5xdnF3r.6yWAu7YynEznhPaWJfgaC"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddysiakaaaaa@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$413IgBKm31X7vRBeWPsGKOTRZwZFpnDjbxbAb97pUmf/nj8XHs5gG",
+    "confirmpassword": "$2a$10$413IgBKm31X7vRBeWPsGKOTRZwZFpnDjbxbAb97pUmf/nj8XHs5gG"
+  },
+  {
+    "Firstname": "tedd",
+    "Secondname": "siaka",
+    "email": "teddys@gmail.com",
+    "company": "kenya",
+    "password": "$2a$10$11Hw.RRhvY0TrNeuYzPfpOQKZhCxCg1zOShTqYl8GZnWhziQQbWba",
+    "confirmpassword": "$2a$10$11Hw.RRhvY0TrNeuYzPfpOQKZhCxCg1zOShTqYl8GZnWhziQQbWba"
+  },
+  {
+    "Firstname": "123",
+    "Secondname": "124",
+    "email": "1@gmail.com",
+    "company": "tttt",
+    "password": "$2a$10$dww6k43TSRSf/CJ9ANsrrOIhL9LfPU.62qcQzQlL9lDCHREqqF1gm",
+    "confirmpassword": "$2a$10$dww6k43TSRSf/CJ9ANsrrOIhL9LfPU.62qcQzQlL9lDCHREqqF1gm"
+  },
+  {
+    "Firstname": "22222",
+    "Secondname": "xxxxxxxx",
+    "email": "dn@gmail.com",
+    "company": "ssssss",
+    "password": "$2a$10$y2gwJ0a0MePrnqGIGDWmYOtCr01YBy5GQeXgWZZSbgzbUKm7gBu76",
+    "confirmpassword": "$2a$10$y2gwJ0a0MePrnqGIGDWmYOtCr01YBy5GQeXgWZZSbgzbUKm7gBu76"
   }
 ]
