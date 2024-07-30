@@ -19,10 +19,9 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
+.logo img{
+    height: 35px;
+    width: 100px;
     cursor: pointer;
 }
 
@@ -88,10 +87,104 @@ header {
     position: absolute;
     left:  10px;
     top: 10px;
-    color: #000;
-    font-size: 28px;
-    font-weight: bold;
+    display: inline-block;
+    font-size: 17px;
+    width: 3.5em;
+}
+
+.slider {
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(182, 182, 182);
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    border-radius: 8px;
+    left: 0.3em;
+    bottom: 0.9px;
+    transform: rotate(270deg);
+    background-color: rgb(255, 255, 255);
+    transition: .4s;
+  }
+  
+  .enter input:checked + .slider {
+    background-color: #21cc4c;
+  }
+  
+  .enter input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .enter input:checked + .slider:before {
+    transform: translateX(1.5em);
+  }
+
+.enter input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.company {
+    position: absolute;
+    left:  10px;
+    top: 10px;
+    display: inline-block;
+    font-size: 17px;
+    width: 3.5em;
+}
+
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #21cc4c;
+    transition: .4s;
+    border-radius: 10px;
+}
+
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    border-radius: 8px;
+    left: 0.3em;
+    bottom: 0.9px;
+    transform: rotate(270deg);
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+  }
+  
+  .company input:checked + .slide {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .company input:focus + .slide {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .company input:checked + .slide:before {
+    transform: translateX(1.5em);
+  }
+
+.company input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .close {

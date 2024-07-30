@@ -32,7 +32,7 @@ header {
 .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
+    background-color: #007bff;
     color: white;
 }
 .team {
@@ -52,4 +52,9 @@ header {
 .team img {
     width: 100%;
     border-radius: 50%;
+}
+
+.logo img {
+    width: 100px;
+    height: 35px; 
 }
