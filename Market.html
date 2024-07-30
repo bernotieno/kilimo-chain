@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="static/market.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo" onclick="window.location.href='/'"><image src="Images/logo.png" alt="Kilimo-Chain Logo"></image></span>
+            <nav class="rightSide">
+                <span class="home" onclick="window.location.href='index.html'">Home</span>
+                <span class="buy" onclick="window.location.href='product.html'">Buy Products</span>
+                <span class="transact" onclick="window.location.href='history.html'">Transactions History</span>
+                <span class="prof" onclick="window.location.href='profile.html'">Profile</span>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <section id="product-stats">
+            <h2>Product Stats</h2>
+            <div id="products-available">Products Available: <span id="products-count">50</span></div>
+            <div id="total-transactions">Total Transactions: <span id="transactions-count">200</span></div>
+        </section>
+        <section id="commodity-prices">
+            <h2>Current Prices</h2>
+            <ul id="price-list">
+                <li>Apples: $1.2</li>
+                <li>Oranges: $1.5</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </section>
+        <section id="available-quantity">
+            <h2>Available Quantity</h2>
+            <ul id="quantity-list">
+                <li>Apples: 100</li>
+                <li>Oranges: 80</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </section>
+        <section id="seller-ratings">
+            <h2>Seller Ratings</h2>
+            <ul id="ratings-list">
+                <li>John Doe: 4.5 stars</li>
+                <li>Jane Smith: 4.7 stars</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
