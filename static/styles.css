@@ -2,6 +2,16 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     transition: filter 0.3s;
+    background-image: url('/Images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    text-align: center;
 }
 
 header {
@@ -10,6 +20,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
 }
 
 .container {
@@ -70,7 +89,12 @@ header {
 
 main {
     padding: 20px;
-    /* Add styles for the main content */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Modal styles */
@@ -219,4 +243,36 @@ main {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+.features {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.feature-box {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature-box h3 {
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    margin: 0;
+}
+
+.logo img {
+    width: 100px;
+    height: 35px; 
 }

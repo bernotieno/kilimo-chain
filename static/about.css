@@ -53,3 +53,8 @@ header {
     width: 100%;
     border-radius: 50%;
 }
+
+.logo img {
+    width: 100px;
+    height: 35px; 
+}
