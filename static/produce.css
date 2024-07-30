@@ -53,6 +53,24 @@ h1 {
     color: #777;
 }
 
+nav.rightSide {
+    display: flex;
+    gap: 20px; 
+}
+
+nav.rightSide span {
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+nav.rightSide span:hover {
+    background-color: #f0f0f0;
+}
+
+
 .container {
     width: 100%;
     max-width: auto;
