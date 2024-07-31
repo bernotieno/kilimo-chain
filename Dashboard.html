@@ -6,43 +6,44 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="static/dash.css">
     <script src="static/scriptdash.js" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.9.4" defer></script>
 </head>
 <body>
     <div class="navbar">
-        <button class="toggle-btn">&#9776;</button>
+        <button class="toggle-btn" hx-get="#sidebar" hx-target="#sidebar" hx-swap="toggle">&#9776;</button>
         <div class="user-info">
             <img src="user-image.jpg" alt="User Image" class="user-image">
-            <span class="username">Username</span>
+            <span class="username">{{.Name}}</span>
         </div>
-        <button class="logout-btn">Log Out</button>
+        <button class="logout-btn" hx-get="/logout" hx-target="body" hx-swap="outerHTML">Log Out</button>
     </div>
 
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" id="close-btn">&times;</button>
-        <a href="#" id="home-link">Home</a>
-        <a href="#" id="info-link">Info</a>
-        <a href="#" id="sale-link">Sale</a>
-        <a href="#" id="logout-link">Log Out</a>
+    <div class="sidebar" id="sidebar" hx-get="/sidebar-content" hx-trigger="load" hx-target="#sidebar" hx-swap="innerHTML">
+        <button class="close-btn" id="close-btn" hx-get="#sidebar" hx-target="#sidebar" hx-swap="toggle">&times;</button>
+        <a href="#" id="home-link" hx-get="/home" hx-target="#main-content" hx-swap="innerHTML">Home</a>
+        <a href="#" id="info-link" hx-get="/info" hx-target="#main-content" hx-swap="innerHTML">Info</a>
+        <a href="#" id="sale-link" hx-get="/sale" hx-target="#main-content" hx-swap="innerHTML">Sale</a>
+        <a href="#" id="logout-link" hx-get="/logout" hx-target="body" hx-swap="outerHTML">Log Out</a>
     </div>
 
-    <div class="main-content" id="main-content">
+    <div class="main-content" id="main-content" hx-get="/home" hx-trigger="load" hx-target="#main-content" hx-swap="innerHTML">
         <div id="home" class="content active">
             <h2>User Overview</h2>
             <div class="home-grid">
                 <div class="panel user-info-panel">
-                    <p><strong>Description:</strong> Short description of the user.</p>
+                    <p><strong>Description:{{.Description}}</strong> Short description of the user.</p>
                 </div>
                 <div class="panel sales-info-panel">
-                    <p><strong>Total Sales:</strong> 123</p>
-                    <p><strong>Completed Sales:</strong> 100</p>
-                    <p><strong>Ongoing Trades:</strong> 5</p>
-                    <p><strong>Profit Margin:</strong> 20%</p>
+                    <p><strong>Total Sales:</strong> {{.TotalSales}}</p>
+                    <p><strong>Completed Sales:</strong> {{.CompletedSales}}</p>
+                    <p><strong>Ongoing Trades:</strong> {{.OngoingTrade}}</p>
+                    <p><strong>Profit Margin:</strong> {{.Profit}}</p>
                 </div>
                 <div class="panel trending-items-panel">
                     <p><strong>Trending:</strong> Item 1, Item 2, Item 3</p>
                 </div>
                 <div class="panel messages-rating-panel">
-                    <p><strong>Messages:</strong> <span class="message-icon">📩</span> No new messages</p>
+                    <p><strong>Messages:</strong> <span class="message-icon">📩</span> {{.Messages}}</p>
                     <p><strong>Rating:</strong> <span class="star-icon">⭐</span> 4.5/5</p>
                 </div>
             </div>
@@ -56,7 +57,7 @@
         <div id="sale" class="content">
             <h2>Post a Product for Sale</h2>
             <div class="sale-form-card">
-                <form id="sale-form">
+                <form id="sale-form" hx-post="/post-product" hx-target="#main-content" hx-swap="innerHTML">
                     <label for="product-image">Product Image:</label>
                     <input type="file" id="product-image" required>
                     <label for="short-description">Short Description:</label>
