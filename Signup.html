@@ -13,27 +13,26 @@
         <button id="option2-btn" class="theme-button">Cooperates</button>
 
         <div id="form1" class="form-container">
-            <form id="signup-form1">
+            <form id="signup-form1" action="/signup/farmers" method="POST">
                 <h2>Sign Up Option 1</h2>
-                <input type="text" id="signup1-name" placeholder="Name" required>
-                <input type="email" id="signup1-email" placeholder="Email" required>
-                <input type="password" id="signup1-password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm password" required>
+                <input type="text" name="first_name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
                 <button type="submit" class="theme-button">Sign Up</button>
             </form>
         </div>
 
         <div id="form2" class="form-container">
-            <form id="signup-form2">
+            <form id="signup-form2" action="/signup/cooperates" method="POST">
                 <h2>Sign Up Option 2</h2>
-                <input type="text" id="signup2-name" placeholder="Company name" required>
-                <input type="email" id="signup2-email" placeholder="Company Email" required>
-                <input type="password" id="signup2-password" placeholder="Password" required>
-                <input type="tel" id="signup2-phone" placeholder="Phone Number" required>
+                <input type="text" name="company" placeholder="Company name" required>
+                <input type="email" name="email" placeholder="Company Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
                 <button type="submit" class="theme-button">Sign Up</button>
             </form>
         </div>
-    </div>
 
     <script src="static/script.js"></script>
 </body>
