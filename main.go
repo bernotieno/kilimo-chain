@@ -1,19 +1,16 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 	"text/template"
-	"time"
 
-	blockchain "kilimo-chain/block"
+	"kilimo-chain/asfuncss"
 )
 
-// Initialize blockchain instance
-var blockchainInstance *blockchain.Blockchain
+func SignUphandler(w http.ResponseWriter) {
+	tmp, _ := template.ParseFiles("index.html")
 
 	tmp.Execute(w, nil)
 }

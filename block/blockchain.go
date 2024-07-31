@@ -42,7 +42,6 @@ type QualityAssesment struct {
 	Metrics     map[string]float64
 	Timestamp   int64
 }
-
 type PriceUpdate struct {
 	ProductType string
 	Location    string
@@ -78,9 +77,17 @@ func NewBlock(data BlockData, PrevBlockHash []byte) *Block {
 	return block
 }
 
-func (bc *Blockchain) AddBlock(data BlockData) {
+func (bc *Blockchain) AddBlock(data string) {
+	// Convert string data to BlockData
+	var blockData BlockData
+	err := json.Unmarshal([]byte(data), &blockData)
+	if err != nil {
+		// Handle error (e.g., log it, return an error, etc.)
+		return
+	}
+
 	prevBlock := bc.blocks[len(bc.blocks)-1]
-	newBlock := NewBlock(data, prevBlock.Hash)
+	newBlock := NewBlock(blockData, prevBlock.Hash)
 	bc.blocks = append(bc.blocks, newBlock)
 }
 
