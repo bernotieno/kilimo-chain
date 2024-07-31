@@ -46,8 +46,8 @@ func main() {
 	})
 
 	// Start the server
-	fmt.Println("Server started at :9875")
-	log.Fatal(http.ListenAndServe(":9875", nil))
+	fmt.Println("Server started at :9874")
+	log.Fatal(http.ListenAndServe(":9874", nil))
 }
 // Signup for Farmers
 func handleSignupFarmers(w http.ResponseWriter, r *http.Request) {
