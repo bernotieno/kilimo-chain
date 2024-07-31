@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="static/signup.css">
+    <link rel="stylesheet" href="/static/signup.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Join Our Community</h1>
@@ -13,13 +14,13 @@
         <button id="option2-btn" class="theme-button">Cooperates</button>
 
         <div id="form1" class="form-container">
-            <form id="signup-form1">
+            <form id="signup-form1" action="/reg" methd="POST">
                 <h2>Please fill in your information</h2>
-                <input type="text" id="signup1-name" placeholder="Name" required>
-                <input type="email" id="signup1-email" placeholder="Email" required>
-                <input type="password" id="signup1-password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm password" required>
-                <button type="submit" onclick="window.location.href='Signin.html'" class="theme-button">Sign Up</button>
+                <input type="text" id="signup1-name" placeholder="Name"  name="Name" required>
+                <input type="email" id="signup1-email" placeholder="Email" name="Email" required>
+                <input type="password" id="signup1-password" placeholder="Password" name="Password" required>
+                <input type="password" placeholder="Confirm password" name="Confirmpassword" required>
+                <button type="submit"  class="theme-button">Sign Up</button>
             </form>
         </div>
 
