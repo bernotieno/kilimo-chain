@@ -6,24 +6,23 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="static/dash.css">
     <script src="static/scriptdash.js" defer></script>
-    <script defer src="https://unpkg.com/htmx.org@2.0.0"></script>
 </head>
 <body>
     <div class="navbar">
         <button class="toggle-btn">&#9776;</button>
         <div class="user-info">
-            <img src="user-image.jpg" alt="User Image" class="user-image">
-            <span class="username">{{.Name}}</span>
+            <img src="Images/user-image.jpg" alt="User Image" class="user-image">
+            <span class="username">Username</span>
         </div>
         <button class="logout-btn">Log Out</button>
     </div>
 
     <div class="sidebar" id="sidebar">
         <button class="close-btn" id="close-btn">&times;</button>
-        <a href="#" id="home-link">Home</a>
+        <a href="/" id="home-link">Home</a>
         <a href="#" id="info-link">Info</a>
         <a href="#" id="sale-link">Sale</a>
-        <a href="#" id="logout-link">Log Out</a>
+        <a href="/signin" id="logout-link">Log Out</a>
     </div>
 
     <div class="main-content" id="main-content">
@@ -34,10 +33,10 @@
                     <p><strong>Description:</strong> Short description of the user.</p>
                 </div>
                 <div class="panel sales-info-panel">
-                    <p><strong>Total Sales:</strong> {{.TotalSales}}</p>
-                    <p><strong>Completed Sales:</strong> {{.CompletedSales}}</p>
-                    <p><strong>Ongoing Trades:</strong> {{.OngoingTrade}}</p>
-                    <p><strong>Profit Margin:</strong> {{}.ProfitMargin}</p>
+                    <p><strong>Total Sales:</strong> 123</p>
+                    <p><strong>Completed Sales:</strong> 100</p>
+                    <p><strong>Ongoing Trades:</strong> 5</p>
+                    <p><strong>Profit Margin:</strong> 20%</p>
                 </div>
                 <div class="panel trending-items-panel">
                     <p><strong>Trending:</strong> Item 1, Item 2, Item 3</p>
