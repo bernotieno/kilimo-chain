@@ -2,15 +2,11 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: #f4f4f9;
-    font-family: 'Arial', sans-serif;
-    background: #f4f4f9;
     display: flex;
-    flex-direction: column;
     flex-direction: column;
     height: 100vh;
 }
 
-.navbar {
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -25,19 +21,7 @@ body {
     background-color: #f44336;
     color: white;
     border: none;
-    background-color: #4caf50;
-    color: white;
     padding: 10px;
-    height: 50px;
-}
-
-.logout-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -52,23 +36,8 @@ body {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
-.user-info {
-    display: flex;
-    align-items: center;
 }
 
-.user-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.username {
-    font-size: 18px;
-}
-
-.toggle-btn {
 .username {
     font-size: 18px;
 }
@@ -92,44 +61,8 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
 }
 
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 36px;
-    color: white;
-}
-
-.main-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
 .sidebar a {
     padding: 10px 15px;
     text-decoration: none;
@@ -175,50 +108,9 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-}
-
-.content.active {
-    display: block;
-}
-
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.panel {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-#home.active, #info.active, #sale.active {
-    display: block;
-}
-
-h2 {
-    font-family: 'Georgia', serif;
-    color: #4caf50;
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 #home.active, #info.active, #sale.active {
     display: block;
 }
@@ -256,20 +148,8 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
 button[type="submit"]:hover {
     background-color: #45a049;
 }
@@ -277,14 +157,8 @@ button[type="submit"]:hover {
 .message-icon {
     color: #4caf50;
     margin-right: 10px;
-.message-icon {
-    color: #4caf50;
-    margin-right: 10px;
 }
 
-.star-icon {
-    color: #ff9800;
-    margin-right: 10px;
 .star-icon {
     color: #ff9800;
     margin-right: 10px;
