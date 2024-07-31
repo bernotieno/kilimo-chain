@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Login Page</title>
-    <link rel="stylesheet" href="static/signin.css">
+    <link rel="stylesheet" href="/static/signin.css">
 </head>
 <body>
+           {{.Err}}
     <div class="login-container">
         <h1>Login</h1>
-        <form>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+        <form action="/login" method="POST">
+            <input type="text" placeholder="Email" name="loginemaail">
+            <input type="password" placeholder="Password" name="loginpassword">
             <button type="submit">Log In</button>
         </form>
         <div class="footer">

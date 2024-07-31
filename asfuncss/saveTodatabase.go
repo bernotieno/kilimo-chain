@@ -8,10 +8,8 @@ import (
 )
 
 type User struct {
-	Firstname       string `json:"Firstname"`
-	Secondname      string `json:"Secondname"`
+	Name            string `json:"name"`
 	Email           string `json:"email"`
-	Company         string `json:"company"`
 	Password        string `json:"password"`
 	Confirmpassword string `json:"confirmpassword"`
 }
@@ -26,10 +24,8 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 
 	user := User{
-		Firstname:       r.FormValue("Firstname"),
-		Secondname:      r.FormValue("Secondname"),
+		Name:            r.FormValue("Name"),
 		Email:           r.FormValue("Email"),
-		Company:         r.FormValue("Company"),
 		Password:        r.FormValue("Password"),
 		Confirmpassword: r.FormValue("Confirmpassword"),
 	}
@@ -45,18 +41,18 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 		user.Confirmpassword = user.Password
 		Email = user.Email
 		SaveDetails(user, w)
-		http.Redirect(w, r, "/about", http.StatusFound)
+		http.Redirect(w, r, "/signin", http.StatusFound)
 	}
 }
 
-func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
-	t, err := template.ParseFiles(tmpl)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	t.Execute(w, data)
-}
+// func renderTemplate(w http.ResponseWriter, tmpl string, data PageData) {
+// 	t, err := template.ParseFiles(tmpl)
+// 	if err != nil {
+// 		http.Error(w, err.Error(), http.StatusInternalServerError)
+// 		return
+// 	}
+// 	t.Execute(w, data)
+// }
 
 func AboutUs(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("Dashboard.html"))

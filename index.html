@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="static/styles.css">
+   <script defer src="https://unpkg.com/htmx.org@2.0.0"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <span class="logo"><img src="Images/kilimo-chain.png" alt="Kilimo-Chain"></span>
             <nav class="rightSide">
-                <button class="sign-up" onclick="window.location.href='Signup.html'">Register</button>
-                <span class="product" onclick="window.location.href='products.html'">Products</span>
-                <span class="part" onclick="window.location.href='collaborators.html'">Partners</span>
-                <button class="sign-up" onclick="openSignUpForm()">Register</button>
+                <a href="/signup" style="display: inline-block; text-decoration: none; padding: 5px;">Register</a>
+                <a href="/products" style="display: inline-block; text-decoration: none;padding: 5px;">products</a>
+                <a href="/partners" style="display: inline-block; text-decoration: none;padding: 5px;">Parteners</a> 
+                <a href="/about" style="display: inline-block; text-decoration: none; padding: 5px;">About</a>
+                
             </nav>
 
         </div>
     </header>
     <main>
         <!-- Main content here -->
+        <div class="main-content">
+            <!-- Logo image -->
+            <img src="Images/logo.png" alt="Kilimo-Chain Logo" />
+            <!-- Main content here -->
+            <h1>Welcome to KILIMO-CHAIN</h1>
+            <h2>Revolutionizing Agricultural Supply Chains in Kenya with Blockchain Transparency</h2>
+        </div>
     </main>
 
    
+
+
 
 </body>
 </html>
