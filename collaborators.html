@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaborators</title>
+    <title>Partners</title>
     <link rel="stylesheet" href="static/collab.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <span class="logo" onclick="window.location.href='/'"><img src="Images/kilimo-chain.png" alt="Kilimo-Chain" ></span>
+            <span class="logo" onclick="window.location.href='/'"><image src="Images/logo.png" alt="Kilimo-Chain Logo"></image></span>
             <nav class="rightSide">
+                <span class="home" onclick="window.location.href='index.html'">Home</span>
                 <span class="about" onclick="window.location.href='about.html'">About</span>
                 <span class="product" onclick="window.location.href='products.html'">Products</span>
-                <button class="sign-up" onclick="openSignUpForm()">Register</button>
             </nav>
 
         </div>
     </header>
 
     <main>
-
-        <div class="heading">
-            <h1>COLLABORATORS</h1>
-            <p>The following consist of well renowned organisations that are in use of our software to make work easier:</p>
-        </div>
         <div class="banner-container">
             <div class="banner">
                 <img src="Images/john.webp" alt="Company logo" class="logopng">
@@ -55,7 +50,7 @@
             </div>
 
             <div class="banner">
-                <img src="Images/Bayer.png" alt="Company logo" class="logopng">
+                <img src="Images/Bayer.jpg" alt="Company logo" class="logopng">
                 <div class="banner-content">
                     <h2>3. Bayer Crop Science</h2>
                     <p class="short">Bayer Crop Science is a division of Bayer AG focused on agricultural products.</p>
@@ -70,7 +65,7 @@
             </div>
 
             <div class="banner">
-                <img src="Images/agco.png" alt="Company logo" class="logopng">
+                <img src="Images/agco.jpg" alt="Company logo" class="logopng">
                 <div class="banner-content">
                     <h2>4. AGCO Corporation</h2>
                     <p class="short">
@@ -108,12 +103,9 @@
 
     <div id="signup-form" class="modal">
         <div class="modal-content">
-            <label class="enter">
-                <input type="checkbox">
-                <span class="slider" onclick="openFarmerSignUpForm()"></span>
-            </label>
+            <span class="enter" onclick="openFarmerSignUpForm()">Farmer</span>
             <span class="close" onclick="closeForms()">&times;</span>
-            <h2>REGISTER AS A BUYER</h2>
+            <h2>REGISTER</h2>
             <P>Sign up now and get full access</P>
             <form>
                 <div class="name-container">
@@ -132,12 +124,8 @@
 
     <div id="farmer-signup" class="modal">
         <div class="modal-content">
-            <label class="company">
-                <input type="checkbox">
-                <span class="slide" onclick="openSignUpForm()"></span>
-            </label>
             <span class="close" onclick="closeForms()">&times;</span>
-            <h2>REGISTER AS A FARMER</h2>
+            <h2>REGISTER</h2>
             <p>Register and sell all you want.</p>
             <form>
                 <div class="name-container">
@@ -169,6 +157,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>

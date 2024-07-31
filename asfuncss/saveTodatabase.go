@@ -8,8 +8,7 @@ import (
 )
 
 type User struct {
-	Firstname       string `json:"Firstname"`
-	Secondname      string `json:"Secondname"`
+	Name            string `json:"name"`
 	Email           string `json:"email"`
 	Company         string `json:"company"`
 	Password        string `json:"password"`
@@ -26,8 +25,7 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 
 	user := User{
-		Firstname:       r.FormValue("Firstname"),
-		Secondname:      r.FormValue("Secondname"),
+		Name:            r.FormValue("Name"),
 		Email:           r.FormValue("Email"),
 		Company:         r.FormValue("Company"),
 		Password:        r.FormValue("Password"),

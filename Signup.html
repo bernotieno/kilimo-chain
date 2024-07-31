@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="static/signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Join Our Community</h1>
+        <button id="option1-btn" class="theme-button">Farmers</button>
+        <button id="option2-btn" class="theme-button">Cooperates</button>
+
+        <div id="form1" class="form-container">
+            <form id="signup-form1" action="/signup/farmers" method="POST">
+                <h2>Sign Up Option 1</h2>
+                <input type="text" name="first_name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+                <button type="submit" class="theme-button">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="form2" class="form-container">
+            <form id="signup-form2" action="/signup/cooperates" method="POST">
+                <h2>Sign Up Option 2</h2>
+                <input type="text" name="company" placeholder="Company name" required>
+                <input type="email" name="email" placeholder="Company Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <button type="submit" class="theme-button">Sign Up</button>
+            </form>
+        </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

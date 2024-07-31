@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="static/signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LOG IN</h1>
+        <button id="option1-btn" class="theme-button">Farmers</button>
+        <button id="option2-btn" class="theme-button">Cooperates</button>
+
+        <div id="form1" class="form-container">
+            <form id="signin-form1" action="/signin/farmers" method="POST">
+                <h2>Log IN Option 1</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="theme-button">Log In</button>
+            </form>
+        </div>
+
+        <div id="form2" class="form-container">
+            <form id="signin-form2" action="/signin/cooperates" method="POST">
+                <h2>Log IN Option 2</h2>
+                <input type="email" name="email" placeholder="Company Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="theme-button">Log In</button>
+            </form>
+        </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
