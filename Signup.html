@@ -14,6 +14,7 @@
         <button id="option2-btn" class="theme-button">Cooperates</button>
 
         <div id="form1" class="form-container">
+            {{.Err}}
             <form id="signup-form1" action="/reg" methd="POST">
                 <h2>Please fill in your information</h2>
                 <input type="text" id="signup1-name" placeholder="Name"  name="Name" required>

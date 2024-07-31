@@ -2,6 +2,7 @@ package asfuncss
 
 import (
 	"encoding/json"
+	"log"
 	"net/http"
 	"os"
 	"text/template"
@@ -31,9 +32,15 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if CheckUsernameExist(user.Email, w) {
-		// data := PageData{ErrorMessage: "Passwords do not match."}
-		// renderTemplate(w, "errorform.html", data)
+		data := Error{"WRONG PASSWORD"}
+		tmpl, _ := template.ParseFiles("Signup.html")
+		err := tmpl.Execute(w, data)
+		if err != nil {
+			log.Fatalf("template parsing error: %v", err)
+		}
+		log.Printf("Executing template with data: %+v", data)
 		return
+
 	} else if user.Password != user.Confirmpassword {
 		return
 	} else {

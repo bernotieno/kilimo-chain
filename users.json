@@ -46,5 +46,23 @@
     "email": "yourr@gmail.com",
     "password": "$2a$10$Wf.kY4/9.5eI4wLHmL6zFekmjwT34wbztTi2AYJVdQLpmiMlvtiTy",
     "confirmpassword": "$2a$10$Wf.kY4/9.5eI4wLHmL6zFekmjwT34wbztTi2AYJVdQLpmiMlvtiTy"
+  },
+  {
+    "name": "TEDDY",
+    "email": "siaka@gmail.com",
+    "password": "$2a$10$6/jEOew9Gq1g1Weag4CYH.VMzyLW78HdJTQYphqg18pMYlAMDjpG2",
+    "confirmpassword": "$2a$10$6/jEOew9Gq1g1Weag4CYH.VMzyLW78HdJTQYphqg18pMYlAMDjpG2"
+  },
+  {
+    "name": "Otieno",
+    "email": "kenya@gmail.com",
+    "password": "$2a$10$ZH.dPAOe89B5epXp4Oz7tu/TO4XgNCDSoaP2Lxy4DR9GCtQnaQQPu",
+    "confirmpassword": "$2a$10$ZH.dPAOe89B5epXp4Oz7tu/TO4XgNCDSoaP2Lxy4DR9GCtQnaQQPu"
+  },
+  {
+    "name": "TEDDDY",
+    "email": "dan@gmail.com",
+    "password": "$2a$10$ifUHEh80A7KbwcOEDzLQxuv7GzqwFjnLnJ9x8fT3PRPqTSkeJqsLi",
+    "confirmpassword": "$2a$10$ifUHEh80A7KbwcOEDzLQxuv7GzqwFjnLnJ9x8fT3PRPqTSkeJqsLi"
   }
 ]

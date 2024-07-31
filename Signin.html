@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="/static/signin.css">
 </head>
 <body>
-           {{.Err}}
+          
     <div class="login-container">
+        {{.Err}}
         <h1>Login</h1>
         <form action="/login" method="POST">
-            <input type="text" placeholder="Email" name="loginemaail">
+            <input type="text" placeholder="Email" name="loginemaail" required>
             <input type="password" placeholder="Password" name="loginpassword">
             <button type="submit">Log In</button>
         </form>

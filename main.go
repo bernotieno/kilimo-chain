@@ -30,7 +30,7 @@ func router(w http.ResponseWriter, r *http.Request) {
 		Loginpageload(w, r)
 	} else if r.URL.Path == "/signin" {
 		signin(w, r)
-	} else if r.URL.Path == "/about" {
+	} else if r.URL.Path == "/Dashboard" {
 		asfuncss.DashboardHandler(w, r)
 	} else if r.URL.Path == "/signup" {
 		signup(w, r)
