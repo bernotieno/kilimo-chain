@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9') no-repeat center center fixed;
+    background: url('/Images/background.jpg');
     background-size: cover;
     color: #fff;
 }
@@ -24,7 +24,7 @@ h1 {
 
 h2 {
     margin-bottom: 10px;
-    color: #ffeb3b;
+    color: #020202;
 }
 
 .theme-button {
