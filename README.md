@@ -26,7 +26,7 @@ Kilimo-Chain is a web application for managing agricultural supply chains. It al
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/kilimo-chain.git
+git clone https://github.com/bernotieno/kilimo-chain.git
 cd kilimo-chain
 ```
 
