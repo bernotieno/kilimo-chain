@@ -7,10 +7,25 @@ import (
 	"net/http"
 	"os"
 	"text/template"
+	"strconv"
 	"time"
 
 	blockchain "kilimo-chain/block"
 )
+
+func port() int16 {
+	var port int16 = 9000
+
+	portStr, found := os.LookupEnv("PORT")
+	if !found {
+		return port
+	}
+	iport, err := strconv.Atoi(portStr)
+	if err != nil {
+		return port
+	}
+	return int16(iport)
+}
 
 // Initialize blockchain instance
 var blockchainInstance *blockchain.Blockchain
@@ -32,6 +47,8 @@ func signin(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := port()
+	
 	// Serve static files
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
@@ -59,8 +76,9 @@ func main() {
 	})
 
 	// Start the server
-	fmt.Println("Server started at :9874")
-	log.Fatal(http.ListenAndServe(":9874", nil))
+	p := fmt.Sprintf(":%d", port)
+	fmt.Println("Server started at ", p)
+	log.Fatal(http.ListenAndServe(p, nil))
 }
 // Signup for Farmers
 func handleSignupFarmers(w http.ResponseWriter, r *http.Request) {
